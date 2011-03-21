@@ -1,0 +1,26 @@
+Shared Host FFMPEG Installer is a free software under the license of GPL version 2 or lateri
+ and is used for setting up ffmpeg environment in shared hosting accounts. This program will 
+install all required module in your shared server for a single user with its own stand alone 
+php,runing as cgi binary. The php is a hardened php with a minimal requirements including 
+gd,gettext,iconv,libjpeg,freetype and zlib. 
+
+To know about the  installation procedures please read the file INSTALL
+
+#######################################################################
+AUTHOR
+        Written By Sherinmon A
+
+REPORTING BUGS
+        Sherinmon A <sherinmon@gmail.com>
+
+
+Report Bugs in : http://www.forum.sherin.in/forum.php?id=9
+
+Add a comment : http://www.sherin.in/index.php/category/ffmpeg/
+
+Send your complements to sherinmon@gmail.com
+
+TECHNICAl SUPPORT:
+	Free froum support @ http://www.forum.sherin.in/
+	Paid support send a mail to sherinmon@gmail.com
+
