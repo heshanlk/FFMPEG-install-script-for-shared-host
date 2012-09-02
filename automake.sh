@@ -18,17 +18,17 @@
 #  Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 RED='\033[01;31m'
 RESET='\033[0m'
-_DOWNLOAD_URL='http://downloads.sherin.in/sources'
-_package='automake-1.9.6.tar.gz'
+_DOWNLOAD_URL='http://ftpmirror.gnu.org/automake'
+_package='automake-1.12.3.tar.gz'
 export cpu=`cat "/proc/cpuinfo" | grep "processor"|wc -l`
 clear
 sleep 2
 echo -e $RED"Installation of $_package ....... started"$RESET
 rm -rf $HOME/src/*
 cd $HOME/src
-curl -O $_DOWNLOAD_URL/$_package
-tar -xvzf automake-1.9.6.tar.gz
-cd automake-1.9.6/
+curl -L -O $_DOWNLOAD_URL/$_package
+tar -xvzf $_package
+cd $(basename $_package .tar.gz)
 ./configure --prefix=$HOME
 make -j$cpu
 make install
