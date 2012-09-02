@@ -25,7 +25,7 @@ sleep 2
 echo -e $RED"Installation of $_package ....... started"$RESET
 rm -rf $HOME/src/*
 cd $HOME/src
-wget $_DOWNLOAD_URL/$_package
+curl -L -O $_DOWNLOAD_URL/$_package
 tar -xvzf $_package
 cd $(basename $_package .tar.gz)
 ./configure --prefix=$HOME
