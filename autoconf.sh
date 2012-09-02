@@ -26,7 +26,7 @@ echo -e $RED"Installation of $_package ....... started"$RESET
 rm -rf $HOME/src/*
 cd $HOME/src
 curl -O $_DOWNLOAD_URL/$_package
-tar -xvzf $_package
+tar -xvzf $_DOWNLOAD_URL/$_package
 cd $(basename $_package .tar.gz)
 ./configure --prefix=$HOME
 make -j$cpu
