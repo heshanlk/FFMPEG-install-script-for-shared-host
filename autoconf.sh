@@ -18,16 +18,16 @@
 #  Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 RED='\033[01;31m'
 RESET='\033[0m'
-_DOWNLOAD_URL='http://downloads.sherin.in/sources'
-_package='autoconf-2.61.tar.gz'
+_DOWNLOAD_URL='http://ftpmirror.gnu.org/autoconf'
+_package='autoconf-2.69.tar.gz'
 export cpu=`cat "/proc/cpuinfo" | grep "processor"|wc -l`
 sleep 2
 echo -e $RED"Installation of $_package ....... started"$RESET
 rm -rf $HOME/src/*
 cd $HOME/src
 curl -O $_DOWNLOAD_URL/$_package
-tar -xvzf autoconf-2.61.tar.gz
-cd autoconf-2.61/
+tar -xvzf $_package
+cd $_package/
 ./configure --prefix=$HOME
 make -j$cpu
 make install
