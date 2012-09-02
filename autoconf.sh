@@ -27,7 +27,7 @@ rm -rf $HOME/src/*
 cd $HOME/src
 curl -O $_DOWNLOAD_URL/$_package
 tar -xvzf $_package
-cd $_package/
+cd $(basename $_package .tar.gz)
 ./configure --prefix=$HOME
 make -j$cpu
 make install
